@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title> French, from home </title>
+    <link href="index.css" rel="stylesheet" type="text/css">
+    <link href="about.html">
+    <script src="script.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Vesper+Libre:wght@700&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/6fc1166e58.js" crossorigin="anonymous"></script>
+
+
+    <style>
+        body {
+  background-color: #f1c40f;
+  min-height: 100vh;
+  font-family: Vesper Libre; 
+  font-weight: 250;
+  line-height: 1.5;
+  font-size: 95%;
+  color: black;
+  margin: 0;
+}
+
+h2 {
+        color: black;
+        font-family: Lobster;
+        font-size: 190%;
+        text-align: center;
+        margin: 0 auto;
+        padding: 50px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    color: black;
+}
+
+.nav-links li {
+    width: 120px;
+    margin: 10px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: black;
+}
+
+.nav-links li a:hover {
+    color: white;
+}
+
+.burger {
+  display: none;
+}
+
+.burger div{
+  width: 25px;
+  height: 3px;
+  background-color: black;
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+
+@media (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .nav-links {
+        position: absolute;
+        right: 0px;
+        height: 100vh;
+        top: 6vh;
+        background-color: #f1c40f;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+        z-index: 100;
+    }
+
+    .nav-links li {
+        opacity: 0;
+        margin-top: 50px;
+        text-align: center;
+    }
+
+    .nav-links a {
+        font-size: 18px;
+    }
+
+    .burger {
+        display: block;
+        cursor: pointer;
+        position: absolute;
+        top: 5%;
+        transform: translateY(-50%);
+        right: 2.5rem;
+    }  
+}
+
+.nav-active {
+    transform: translateX(0%);
+}
+
+@keyframes navLinkFade{
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.toggle .line1{
+    transform: rotate(-45deg) translate(-5px,6px);
+}
+
+.toggle .line2{
+    opacity: 0;
+}
+
+.toggle .line3{
+    transform: rotate(45deg) translate(-5px,-6px);
+}
+
+@media (min-width:768px) {
+    nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: white;
+    }
+
+    .nav-links li a:hover {
+        color: #f1c40f;
+    }
+}
+
+
+.info-20 {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+}
+
+@media (min-width: 1024px) {
+    
+   .info-20 {
+       width: 100%;
+       height: auto;
+       max-width: 150vh;
+       margin: 0 auto;
+   } 
+
+   .info-10 {
+       width: 100%;
+       height: auto;
+       max-width: 150vh;
+       margin: 0 auto;
+   }
+   
+   .price-info-2 {
+       background-color: white;
+   }
+}
+
+.price-info-2 {
+       background-color: white;
+   }
+
+.info-10 {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    max-width: 30%;
+    margin: 0;
+    padding: 20px;
+}
+
+.para-20 {
+    margin: auto;
+    padding: 50px;
+    background-color: #f1c40f;
+}
+
+.para-10 {
+    margin: auto;
+    padding: 50px;
+    padding-bottom: 100px;
+}
+
+.custom-shape-divider-bottom-1610666881 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-bottom-1610666881 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 103px;
+}
+
+.custom-shape-divider-bottom-1610666881 .shape-fill {
+    fill: #ffff;
+}
+
+.footer-main-div {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    margin: auto;
+    padding: 3px 0px;
+}
+.social-menu ul {
+    display: flex;
+    padding: 0;
+}
+
+.social-menu li {
+    list-style: none;
+    margin: 0px 10px;
+}
+
+.social-menu ul li .fab {
+    font-size: 20px;
+    line-height: 30px;
+    transition: .3s;
+    color: black;
+    line-height: 40px;
+    vertical-align: middle;
+}
+
+.social-menu ul li .fab:hover {
+    color:black;
+}
+
+.social-menu ul li a {
+    position: relative;
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #e6e7ec;
+    text-align: center;
+    transition: .3s;
+    box-shadow: 0px 5px 4px rgb(0, 0, 0,.5);
+}
+
+.social-menu ul li a:hover {
+    transform: translate(0,-10px);
+}
+
+.social-menu ul li:nth-child(1) a:hover {
+    background-color: #1877f2;
+}
+
+.social-menu ul li:nth-child(2) a:hover {
+    background-color: #c32aa3;
+}
+
+.social-menu ul li:nth-child(3) a:hover {
+    background-color: #0a66c2;
+}
+
+.social-menu ul li:nth-child(4) a:hover {
+    background-color: #35465d;
+}
+            </style>
+    </head>
+
+<body>
+<nav>
+    <ul class="nav-links">
+  <li><a href="index.html">Home</a></li>
+  <li><a href="about.html"></i> About</a></li>
+  <li><a href="information.html"></i>Services</a></li>
+  <li><a href="price.html"></i>Pricing</a></li>
+  <li><a href="contact.html"></i>Register</a></li>
+    </ul>
+
+    <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+</nav>
+
+
+<!--Price Section-->
+<section id="Price">
+    <h2> Pricing </h2>
+
+
+<div class="info-20">
+        <div class="para-20">
+            <p><em>Regarding Beginner/Intermediate/Advanced:</em></p>
+            <p>The first lesson will be free! I want us to get to know each other a bit, understand what you’re looking for from these lessons, and to make arrangements going forwards.</p>
+
+            <p>Afterwards, I’ll be charging £20/hour. I accept Paypal, Lydia or simple bank transfers.</p>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div style="position: relative; background-color: white;">
+        <div class="custom-shape-divider-bottom-1610666881">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
+            </svg>
+        </div>
+    </div>
+
+    <div class="price-info-2">
+    <div class="info-10">
+        <div class="para-10">
+        <p><em>Regarding the Children's group sessions:</em></p>
+            <p>The first session will be free, too! I want the group to get to know each other and introduce ourselves. This session will let me see where your children stand in French.</p>
+
+            <p>I’ll be charging £5/30 minutes, and £2.5/15 minutes. You can either pay as we go along or 4 lessons at a time. Like above, I accept Paypal, Lydia or bank transfers.</p>
+        </div>
+    </div>
+    </div>
+</section>
+<!--End Price Section-->  
+
+<br>
+
+<!--Social Media Footer-->
+<div class="footer-main-div">
+    <div class="social-menu">
+        <ul>
+            <li><a href="https://www.facebook.com/profile.php?id=100012288273237" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a></li>
+            <li><a href="https://www.instagram.com/camille_deguerry/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/camille-de-guerry-de-beauregard/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a></li>
+            <li><a href="https://frenchfromhome.tumblr.com/" target="_blank" rel="noopener noreferrer"><i class="fab fa-tumblr"></i></a></li>
+        </ul>
+    </div>
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
+<!---End Social Media Footer-->

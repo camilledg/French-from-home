@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title> French, from home </title>
+    <link href="index.css" rel="stylesheet" type="text/css">
+    <link href="about.html">
+    <script src="script.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Vesper+Libre:wght@700&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/6fc1166e58.js" crossorigin="anonymous"></script>
+
+
+    <style>
+        body {
+  background-color: #f1c40f;
+  min-height: 100vh;
+  font-family: Vesper Libre; 
+  font-weight: 250;
+  line-height: 1.5;
+  font-size: 95%;
+  color: black;
+  margin: 0;
+}
+
+h2 {
+        color: black;
+        font-family: Lobster;
+        font-size: 190%;
+        text-align: center;
+        margin: 0 auto;
+        padding: 50px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    color: black;
+}
+
+.nav-links li {
+    width: 120px;
+    margin: 10px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: black;
+}
+
+.nav-links li a:hover {
+    color: white;
+}
+
+.burger {
+  display: none;
+}
+
+.burger div{
+  width: 25px;
+  height: 3px;
+  background-color: black;
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+
+@media (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .nav-links {
+        position: absolute;
+        right: 0px;
+        height: 100vh;
+        top: 6vh;
+        background-color: #f1c40f;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+
+    .nav-links li {
+        opacity: 0;
+        margin-top: 50px;
+        text-align: center;
+    }
+
+    .nav-links a {
+        font-size: 18px;
+    }
+
+    .burger {
+        display: block;
+        cursor: pointer;
+        position: absolute;
+        top: 5%;
+        transform: translateY(-50%);
+        right: 2.5rem;
+    }  
+}
+
+.nav-active {
+    transform: translateX(0%);
+}
+
+@keyframes navLinkFade{
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.toggle .line1{
+    transform: rotate(-45deg) translate(-5px,6px);
+}
+
+.toggle .line2{
+    opacity: 0;
+}
+
+.toggle .line3{
+    transform: rotate(45deg) translate(-5px,-6px);
+}
+
+@media (min-width:768px) {
+    nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: white;
+    }
+
+    .nav-links li a:hover {
+        color: #f1c40f;
+    }
+}
+
+        /*Information Section*/
+#services {
+  display: inline-block;
+  display: flex;
+  justify-content: flex-start;
+  padding: 0 50px 0;
+  margin: 0 auto;
+}
+
+
+   /**
+ * Tabs
+ */
+.tabs {
+	display: flex;
+  flex-wrap: wrap; /* make sure it wraps */
+  padding: 0 50px 0;
+}
+
+.tabs label {
+	order: 1; /* Put the labels first */
+	display: block;
+	padding: 1rem 2rem;
+	cursor: pointer;
+  background: white;
+  color: black;
+  font-weight: bold;
+  font-size: 100%;
+  font-family: Vesper Libre;
+  transition: background ease 0.2s; 
+}
+
+.tabs .tab {
+  order: 99; /* Put the tabs last */
+  flex-grow: 1;
+	width: 100%;
+    display: none;
+  padding: 1rem;
+  color: black;
+  background: #e6e7ec;  
+  box-shadow: 5px 5px 5px grey;
+}
+
+.tabs input[type="radio"] {
+	display: none;
+}
+.tabs input[type="radio"]:checked + label {
+	background-color: #e6e7ec;
+}
+.tabs input[type="radio"]:checked + label + .tab {
+	display: block;
+}
+
+@media (max-width: 45em) {
+  .tabs .tab,
+  .tabs label {
+    order: initial;
+  }
+
+.tabs label {
+    width: 100%;
+    margin-right: 0;
+    margin-top: 0.2rem;
+    color: black;
+    font-family: Vesper Libre;
+  }
+}
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2) { 
+    .tabs .tab,
+  .tabs label {
+    order: initial;
+  }
+
+  .tabs .tab {
+    width: 100%!important;
+    padding: 5!important;
+    color: black;
+    background: #e6e7ec;  
+    box-shadow: 5px 5px 5px grey;
+  }
+
+.tabs label {
+    width: 100%;
+    padding: 5 20px 0;
+    margin-top: 0.2rem;
+    color: black;
+    font-family: Vesper Libre;
+  }
+}
+
+@media (min-width: 1024px) {
+    .tabs {
+        max-width: 150vh;
+        margin: 0 auto;
+    } 
+ }
+/*End Informatiom Section*/
+
+/*Social Media Footer*/
+.footer-main-div {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    margin: auto;
+    padding: 3px 0px;
+}
+
+.social-menu ul {
+    display: flex;
+    padding: 0;
+}
+
+.social-menu ul li {
+    list-style: none;
+    margin: 0px 10px;
+}
+
+.social-menu ul li .fab {
+    font-size: 20px;
+    line-height: 30px;
+    transition: .3s;
+    color: black;
+    line-height: 40px;
+    vertical-align: middle;
+}
+
+.social-menu ul li .fab:hover {
+    color:black;
+}
+
+.social-menu ul li a {
+    position: relative;
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #e6e7ec;
+    text-align: center;
+    transition: .3s;
+    box-shadow: 0px 5px 4px rgb(0, 0, 0,.5);
+}
+
+.social-menu ul li a:hover {
+    transform: translate(0,-10px);
+}
+
+.social-menu ul li:nth-child(1) a:hover {
+    background-color: #1877f2;
+}
+
+.social-menu ul li:nth-child(2) a:hover {
+    background-color: #c32aa3;
+}
+
+.social-menu ul li:nth-child(3) a:hover {
+    background-color: #0a66c2;
+}
+
+.social-menu ul li:nth-child(4) a:hover {
+    background-color: #35465d;
+}
+/*End Social Media Footer*/
+            </style>
+    </head>
+
+<body>
+<nav>
+    <ul class="nav-links">
+  <li><a href="index.html">Home</a></li>
+  <li><a href="about.html"></i> About</a></li>
+  <li><a href="information.html"></i>Services</a></li>
+  <li><a href="price.html"></i>Pricing</a></li>
+  <li><a href="contact.html"></i>Register</a></li>
+    </ul>
+
+    <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+</nav>
+
+
+<!--Information Section-->        
+<div id="Services">
+    <h2> Services </h2>
+
+
+<div class="tabs">
+        <input type="radio" name="tabs" id="tabone" checked="checked">
+        <label for="tabone">Beginner</label>
+    <div class="tab">
+        <p><em>Below is a example of what a Beginner lesson could be like. If you like what you see, you can register by filling out the form at the bottom of the page.</em></p>
+        <p>The lessons could look like something along these lines: how to introduce yourself, say what you like, what you dislike; or introduce prepositions and numbers into your vocabulary, how to tell the time and the basic tenses (present, passe compose, future proche). Basically, we’ll reviews basic grammar and vocabulary points and integrate them into our chats. I could, for example, tell you what future proche is, what it’s for, how and when to use it, and we’ll practise. I could ask you to tell me what you intend to do after the lesson is over, or what you’ll eat for supper. All of it using simple, casual words. We can speak in English or in French - we’ll go with what you feel like doing.</p>
+    </div>
+
+        <input type="radio" name="tabs" id="tabtwo">
+        <label for="tabtwo">Intermediate</label>
+    <div class="tab">
+        <p><em>Below is a example of what an Intermediate lesson could be like. If you like what you see, you can register by filling out the form at the bottom of the page.</em></p>
+        <p>Here, we could cover some trickier or general aspects of French. Again, this serves as an example only. We’ll adjust the format and the content together. For example, we could work on more complicated tense like imparfait or passé-composé, etc, whilst working toward developing a natural, conversational French. We could cultivate enough vocabulary to start expressing opinions with confidence, and even understand jokes. The goal here is to practise the basics as much as possible whilst broadening your understanding of the French culture.</p>
+    </div>
+
+        <input type="radio" name="tabs" id="tabthree">
+        <label for="tabthree">Advanced</label>
+    <div class="tab">
+        <p><em>Below is a example of what an Advanced lesson could be like. If you like what you see, you can register by filling out the form at the bottom of the page.</em></p>
+        <p>This last category might be the easiest, to some extent. With Advanced, all we would do is talk. The topics could range from European politics to baking techniques, from classic rock to France’s history - you tell me. Or we could talk about your week, your hobbies, what you’ve been up to during lockdown if you’d like. I could send you a list of additional vocabulary if you want it. This is all up to you, it’s a conversation, pure and simple.</p>
+    </div>
+
+        <input type="radio" name="tabs" id="tabfour">
+        <label for="tabfour">Children's group</label>
+    <div class="tab">
+        <p><em>Even as schools and nurseries are now closed in the UK, children shouldn't stop practicing French.</em></p>
+        <p>When you're young, picking up a language is easy. But hour-long lessons focusing on the grammatical side of things aren't. I'm offering much smaller sessions up to twice a week, focusing on speaking French. I divide the sessions between age groups (from 5 to 8 years-old, a 15-minutes session; from 9 to 12 years-old, a 30-minutes session). No strict curricular involved - I'm here to read stories, practice pronounciation, play games!</p>
+    </div>
+</div>
+</div> 
+<!--End Information Section-->
+
+<br>
+<br>
+<br>
+
+<!--Social Media Footer-->
+<div class="footer-main-div">
+    <div class="social-menu">
+        <ul>
+            <li><a href="https://www.facebook.com/profile.php?id=100012288273237" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a></li>
+            <li><a href="https://www.instagram.com/camille_deguerry/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/camille-de-guerry-de-beauregard/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a></li>
+            <li><a href="https://frenchfromhome.tumblr.com/" target="_blank" rel="noopener noreferrer"><i class="fab fa-tumblr"></i></a></li>
+        </ul>
+    </div>
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
+<!---End Social Media Footer-->

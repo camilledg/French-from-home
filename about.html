@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title> French, from home </title>
+    <link href="index.css" rel="stylesheet" type="text/css">
+    <link href="about.html">
+    <script src="script.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Vesper+Libre:wght@700&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/6fc1166e58.js" crossorigin="anonymous"></script>
+
+    <Style>
+        body {
+  background-color: #f1c40f;
+  min-height: 100vh;
+  font-family: Vesper Libre; 
+  font-weight: 250;
+  line-height: 1.5;
+  font-size: 95%;
+  color: black;
+  margin: 0;
+}
+
+h2 {
+        color: black;
+        font-family: Lobster;
+        font-size: 190%;
+        text-align: center;
+        margin: 0 auto;
+        padding: 50px;
+}
+
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    color: black;
+}
+
+.nav-links li {
+    width: 120px;
+    margin: 10px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: black;
+}
+
+.nav-links li a:hover {
+    color: white;
+}
+
+.burger {
+  display: none;
+}
+
+.burger div{
+  width: 25px;
+  height: 3px;
+  background-color: black;
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .nav-links {
+        position: absolute;
+        right: 0px;
+        height: 100vh;
+        top: 6vh;
+        background-color: #f1c40f;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+
+    .nav-links li {
+        opacity: 0;
+        margin-top: 50px;
+        text-align: center;
+    }
+
+    .nav-links a {
+        font-size: 18px;
+    }
+
+    .burger {
+        display: block;
+        cursor: pointer;
+        position: absolute;
+        top: 5%;
+        transform: translateY(-50%);
+        right: 2.5rem;
+    }  
+
+    .h2 {
+        padding-top: 0;
+    }
+}
+
+.nav-active {
+    transform: translateX(0%);
+}
+
+@keyframes navLinkFade{
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.toggle .line1{
+    transform: rotate(-45deg) translate(-5px,6px);
+}
+
+.toggle .line2{
+    opacity: 0;
+}
+
+.toggle .line3{
+    transform: rotate(45deg) translate(-5px,-6px);
+}
+
+@media (min-width:768px) {
+    nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: white;
+    }
+
+    .nav-links li a:hover {
+        color: #f1c40f;
+    }
+}
+
+@media (min-width: 1024px) {
+    #about {
+        max-width: 150vh;
+        margin: 0 auto;
+    } 
+ }
+/*About me Section*/
+#about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    background: white;
+}
+
+.container-about {
+  max-width: 1500px;
+  display: flex;
+  flex-direction: column;
+}
+
+.text-about {
+padding: 0 50px 0;
+}
+
+.image-about {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    max-width: 50%;
+}
+img {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 3px;
+    border: 1px solid;
+    color: black;
+}
+
+
+/* End About me Section*/
+
+/*Social Media Footer*/
+.footer-main-div {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    margin: auto;
+    padding: 3px 0px;
+}
+
+.social-menu ul {
+    display: flex;
+    padding: 0;
+}
+
+.social-menu ul li {
+    list-style: none;
+    margin: 0px 10px;
+}
+
+.social-menu ul li .fab {
+    font-size: 20px;
+    line-height: 30px;
+    transition: .3s;
+    color: black;
+    line-height: 40px;
+    vertical-align: middle;
+}
+
+.social-menu ul li .fab:hover {
+    color:black;
+}
+
+.social-menu ul li a {
+    position: relative;
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #e6e7ec;
+    text-align: center;
+    transition: .3s;
+    box-shadow: 0px 5px 4px rgb(0, 0, 0,.5);
+}
+
+.social-menu ul li a:hover {
+    transform: translate(0,-10px);
+}
+
+.social-menu ul li:nth-child(1) a:hover {
+    background-color: #1877f2;
+}
+
+.social-menu ul li:nth-child(2) a:hover {
+    background-color: #c32aa3;
+}
+
+.social-menu ul li:nth-child(3) a:hover {
+    background-color: #0a66c2;
+}
+
+.social-menu ul li:nth-child(4) a:hover {
+    background-color: #35465d;
+}
+/*End Social Media Footer*/
+    </Style>
+    </head>
+
+<body>
+<nav>
+    <ul class="nav-links">
+  <li><a href="index.html">Home</a></li>
+  <li><a href="about.html"></i> About</a></li>
+  <li><a href="information.html"></i>Services</a></li>
+  <li><a href="price.html"></i>Pricing</a></li>
+  <li><a href="contact.html"></i>Register</a></li>
+    </ul>
+
+    <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+</nav>
+
+
+
+<!--About me Section--> 
+<h2>About</h2>
+
+<section id="about">
+    <div class="image-about">
+      <img class="image-pro" src="DSC_0516.JPEG" class="responsive" alt="A photograph of Camille"/>
+     </div>
+    <div class= "container-about">
+     <div class="text-about">                   
+      <p>Hi there! I’m Camille de Guerry, a French native from Les Sables d’Olonne. I studied English at university in France, and as soon as I completed my degree I decided to move to Kent. That’s where I am now! I learned to love the English language primarily through watching Doctor Who and Merlin. I found that simply listening to conversations was an incredibly immersive and intuitive way to learn. The accent, speech patterns, vocabulary… it’s all included in everyday conversation when using useful, everyday words.</p>
+      
+      <p>I gave lessons in French throughout my degree, but I am not a teacher. I don’t have the grammatical knowledge in French to offer lessons to students trying to pass exams. Instead, we’d just talk and I will teach you about words and expressions French people actually use, all whilst working on fluency. We would focus on whatever aspects of your French you want to improve, whilst having a (hopefully!) fun conversation.</p>
+     </div> 
+     
+    </div>
+</section>
+<!--End About me Section--> 
+
+<br>
+<br>
+<br>
+
+<!--Social Media Footer-->
+<div class="footer-main-div">
+    <div class="social-menu">
+        <ul>
+            <li><a href="https://www.facebook.com/profile.php?id=100012288273237" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a></li>
+            <li><a href="https://www.instagram.com/camille_deguerry/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/camille-de-guerry-de-beauregard/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a></li>
+            <li><a href="https://frenchfromhome.tumblr.com/" target="_blank" rel="noopener noreferrer"><i class="fab fa-tumblr"></i></a></li>
+        </ul>
+    </div>
+</div>
+<!---End Social Media Footer-->
+    <script src="app.js"></script>
+    </body>
+</html>
